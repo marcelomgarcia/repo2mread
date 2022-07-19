@@ -2,6 +2,16 @@
 
 \usetheme{default}
 
+\usepackage{tcolorbox}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan
+}
+
 \title{Machine Readable Repository}
 \subtitle{Lessons from CORD-19}
 \author{Marcelo Garcia}
@@ -22,7 +32,7 @@
     \end{itemize}
 \end{frame}
 
-\begin{frame}{Who?}
+\begin{frame}{Who is involved?}
     \begin{itemize}
         \item Allen Institute for AI
         \item The White House Office of Science and Technology Policy
@@ -34,22 +44,25 @@
     \end{itemize}
 \end{frame}
 
-\begin{frame}{How?}
+\begin{frame}{How does it work?}
     \begin{itemize}
         \item Metadata and documents (depending on license) ingested with Semantic Scholar
-        \item $PDF \rightarrow XML \rightarrow JSON$ \footnote{Lo et al.2020}
+        \item Pipeline: $PDF \rightarrow XML \rightarrow JSON$ \footnote{Kyle Lo, Lucy LuWang, Mark Neumann, Rodney Kinney, and Daniel S.Weld. 2020. \href{https://arxiv.org/abs/1911.02782}{S2ORC: The Semantic Scholar Open Research Corpus}. In Proceedings of ACL.}
         %\item Extracting information for tables in the PDF requires a separated pipeline
     \end{itemize}
 \end{frame}
 
 \begin{frame}{Why make the repository machine readable?}
-    \begin{itemize}
-        \item Tim Berners-Lee vision of Web 3.0: machines talking with machines
-        \item Machine Learning friendly
-        \item Automatic translation
-        \item Discovery tools
-        %\item Interesting, but still research topic
-    \end{itemize}
+    \begin{description}
+        \item [Tim Berners-Lee's vision] for the next Web: machines talking with machines (``The next Web of open, linked data'' - TED talk)
+        \item [Information extraction] extract key information (entity) in the text, like a specific name or coral species
+        \item [Text classification] extract sentences or passage of interest from the text
+        \item [Knowledge graphs] for a specific domain, like \href{https://healthecco.org/covidgraph/}{HealthEcco}
+    \end{description}
+
+    \begin{tcolorbox}
+        We are providing only the datasets, not doing any AI/ML thing.
+    \end{tcolorbox}
 \end{frame}
 
 \end{document}
