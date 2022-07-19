@@ -48,8 +48,16 @@
     \begin{itemize}
         \item Metadata and documents (depending on license) ingested with Semantic Scholar
         \item Pipeline: $PDF \rightarrow XML \rightarrow JSON$ \footnote{Kyle Lo, Lucy LuWang, Mark Neumann, Rodney Kinney, and Daniel S.Weld. 2020. \href{https://arxiv.org/abs/1911.02782}{S2ORC: The Semantic Scholar Open Research Corpus}. In Proceedings of ACL.}
-        %\item Extracting information for tables in the PDF requires a separated pipeline
     \end{itemize}
+    \begin{tcolorbox}[colback=red!5!white,colframe=red!75!black,title=Challenges]
+    \small
+    \begin{itemize}
+        %\item PDF format not suitable for NLP (Natural Language Processing)
+        \item Significant effort is needed to coerce PDF into a format more amenable to text mining, like S2ORC JSON.
+        \item Not standard format to represent metadata. Formats like \texttt{BIBFRAME} or Dublin Core can be too coarse grained.
+    \end{itemize}
+    \end{tcolorbox}
+    
 \end{frame}
 
 \begin{frame}{Why make the repository machine readable?}
